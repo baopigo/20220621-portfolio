@@ -1,0 +1,152 @@
+*{
+  font-family: 微軟正黑體;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+body{
+   padding: 20px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+h6{
+  margin: 5px;
+  text-align: right;
+}
+
+
+/* 1.hover: 滑鼠移入 | active: 滑鼠點擊 */
+
+
+
+
+.box{
+  width: 200px;
+  height: 200px;
+  border: 3px solid #000;
+  
+  margin-left: 25px;
+  margin-bottom: 30px;
+  
+  cursor:　pointer;
+  transition-duration: 1s;
+}
+
+.red_box,.blue_box{
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000;
+  margin-top: 30px;
+  border-left: none;
+
+transition-duration: 1s;
+}
+
+.box:hover .red_box{
+  background-color: red;
+}
+
+.box:hover .blue_box{
+  background-color: blue;
+  width: 150px;
+}
+
+.box:active{
+  background-color: black;
+}
+
+.big_box{
+  width: 450px;
+  height: 300px;
+  border: 3px solid #000;
+  padding: 20px;
+  margin-left: 25px;
+}
+
+.big_box h1,p{
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transition-duration: 0.5s ;
+}
+.big_box:hover h1, .big_box:hover p{
+  opacity: 1;
+}
+.big_box p{
+  transition-delay: 0.5s;
+  line-height: 30px;
+}
+.table{
+  width: 150px;
+  height: 125px;
+  border: 3px solid #000;
+  margin-left: 25px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 50px;
+}
+
+.card{
+  width: 70px;
+  height: 105px;
+  border: 1px solid #ccc;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
+   opacity: 0;
+  transition-duration: 0.5s;
+    
+  
+}
+img{
+  width: 25px;
+  opacity: 0;
+  transition-duration: 0.5s;
+  user-select: none;
+  
+}
+.numleft{
+  position: absolute;
+  left: 8px;
+  top: 5px;
+}
+
+.numright{
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  user-select: none;
+}
+
+.numleft,.numright{
+  position: absolute;
+  opacity: 0;
+  transition-duration: 0.5s;
+  user-select: none;
+}
+
+.card:active .numleft,.card:active
+.numright{
+  opacity: 1;
+}
+.card:hover img{
+  opacity: 1;
+}
+
+.table:hover{
+  background-color: #222;
+}
+.table:hover .card{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
